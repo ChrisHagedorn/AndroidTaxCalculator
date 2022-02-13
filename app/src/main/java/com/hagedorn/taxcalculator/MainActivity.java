@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private Button btnCalculate;
-    private TextView txtTotalBillRes, txtTotalPerPersonRes, txtTotalTip, txtTipPerPerson;
+    private TextView txtTotalBillRes, txtTotalPerPersonRes, txtTotalTip, txtTipPerPersonRes;
     private EditText editTextCheckAmount, editTextNumberOfPeople, editTextTipPercentage;
     private double checkAmount, numberOfPeople, tipPercentage, totalBill, totalPerPerson, totalTip, tipPerPerson;
 
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         txtTotalBillRes = (TextView) findViewById(R.id.txtTotalBillRes);
         txtTotalPerPersonRes = (TextView) findViewById(R.id.txtTotalPerPersonRes);
         txtTotalTip = (TextView) findViewById(R.id.txtTotalTipRes);
-        txtTipPerPerson = (TextView) findViewById(R.id.txtTipPerPerson);
+        txtTipPerPersonRes = (TextView) findViewById(R.id.txtTipPerPersonRes);
 
         editTextCheckAmount = (EditText) findViewById(R.id.editTextCheckAmount);
         editTextNumberOfPeople = (EditText) findViewById(R.id.editTextNumberOfPeople);
@@ -40,17 +40,24 @@ public class MainActivity extends AppCompatActivity {
                 numberOfPeople = Double.parseDouble(editTextNumberOfPeople.getText().toString());
                 tipPercentage = Double.parseDouble(editTextTipPercentage.getText().toString())/100;
 
-                totalBill = checkAmount + (1+ tipPercentage);
+                totalBill = checkAmount*(1+tipPercentage);
                 totalPerPerson = totalBill/numberOfPeople;
                 totalTip = checkAmount*tipPercentage;
                 tipPerPerson = totalTip/numberOfPeople;
 
-                txtTotalBillRes.setText(String.valueOf(totalBill));
-                txtTotalPerPersonRes.setText(String.valueOf(totalPerPerson));
-                txtTotalTip.setText(String.valueOf(totalTip));
-                txtTipPerPerson.setText(String.valueOf(tipPerPerson));
+                txtTotalBillRes.setText(String.valueOf(Math.round(totalBill)));
+                txtTotalPerPersonRes.setText(String.valueOf(Math.round(totalPerPerson)));
+                txtTotalTip.setText(String.valueOf(Math.round(totalTip)));
+                txtTipPerPersonRes.setText(String.valueOf(Math.round(tipPerPerson)));
+
+                //Round to 2 decimal places
+                //Hide keyboard after calculate button is pressed
+
 
             }
+
+
+
         });
 
     }
