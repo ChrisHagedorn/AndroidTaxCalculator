@@ -1,2 +1,2 @@
-"# AndroidTaxCalculator" 
-"This was a progam I had to create for class"
+# AndroidTaxCalculator
+This was a progam I had to create for class
