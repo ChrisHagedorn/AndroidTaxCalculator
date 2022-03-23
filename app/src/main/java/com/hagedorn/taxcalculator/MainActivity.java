@@ -34,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Program
-                //TotalBill
                 checkAmount = Double.parseDouble(editTextCheckAmount.getText().toString());
                 numberOfPeople = Double.parseDouble(editTextNumberOfPeople.getText().toString());
                 tipPercentage = Double.parseDouble(editTextTipPercentage.getText().toString())/100;
@@ -45,13 +43,10 @@ public class MainActivity extends AppCompatActivity {
                 totalTip = checkAmount*tipPercentage;
                 tipPerPerson = totalTip/numberOfPeople;
 
-                txtTotalBillRes.setText(String.valueOf(Math.round(totalBill)));
-                txtTotalPerPersonRes.setText(String.valueOf(Math.round(totalPerPerson)));
-                txtTotalTip.setText(String.valueOf(Math.round(totalTip)));
-                txtTipPerPersonRes.setText(String.valueOf(Math.round(tipPerPerson)));
-
-                //Round to 2 decimal places
-                //Hide keyboard after calculate button is pressed
+                txtTotalBillRes.setText(String.valueOf(Math.round(totalBill * 100.0)/100.0));
+                txtTotalPerPersonRes.setText(String.valueOf(Math.round(totalPerPerson* 100.0)/100.0));
+                txtTotalTip.setText(String.valueOf(Math.round(totalTip * 100.0)/100.0));
+                txtTipPerPersonRes.setText(String.valueOf(Math.round(tipPerPerson * 100.0)/100.0));
 
 
             }

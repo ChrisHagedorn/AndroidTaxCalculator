@@ -22,8 +22,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:background="#B86A6A"
+                android:fontFamily="@font/anton"
                 android:gravity="center"
-                android:text="Tip Calculator"
+                android:text="TIP CALCULATOR"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -38,6 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:background="#FBB0B0"
+                    android:fontFamily="@font/anton"
                     android:text="Check Amount"
                     android:textAlignment="center" />
 
@@ -47,7 +49,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:ems="10"
-                    android:inputType="numberDecimal" />
+                    android:fontFamily="@font/anton"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             </LinearLayout>
 
@@ -63,6 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:background="#FBB0B0"
+                    android:fontFamily="@font/anton"
                     android:text="Number of People"
                     android:textAlignment="center" />
 
@@ -72,7 +78,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:ems="10"
-                    android:inputType="numberDecimal" />
+                    android:fontFamily="@font/anton"
+                    android:inputType="numberDecimal"
+                    android:minHeight="48dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             </LinearLayout>
 
@@ -88,6 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:background="#FBB0B0"
+                    android:fontFamily="@font/anton"
                     android:text="Tip Percentage %"
                     android:textAlignment="center" />
 
@@ -97,7 +107,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:ems="10"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:fontFamily="@font/anton" />
             </LinearLayout>
 
             <Button
@@ -106,6 +118,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
                 android:backgroundTint="#B86A6A"
+                android:fontFamily="@font/anton"
                 android:text="Calculate" />
 
             <LinearLayout
@@ -120,6 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#FBB0B0"
+                    android:fontFamily="@font/anton"
                     android:gravity="center|center_vertical"
                     android:text="Total Bill" />
 
@@ -128,8 +142,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/anton"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="0.00" />
 
                 <TextView
                     android:id="@+id/txtTotalPerPerson"
@@ -137,6 +152,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#FBB0B0"
+                    android:fontFamily="@font/anton"
                     android:gravity="center|center_vertical"
                     android:text="Total Per Person" />
 
@@ -145,8 +161,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/anton"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="0.00" />
             </LinearLayout>
 
             <LinearLayout
@@ -161,6 +178,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#FBB0B0"
+                    android:fontFamily="@font/anton"
                     android:gravity="center|center_vertical"
                     android:text="Total Tip" />
 
@@ -169,8 +187,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/anton"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="0.00" />
 
                 <TextView
                     android:id="@+id/txtTipPerPerson"
@@ -178,16 +197,18 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#FBB0B0"
+                    android:fontFamily="@font/anton"
                     android:gravity="center|center_vertical"
                     android:text="Tip Per Person" />
 
                 <TextView
                     android:id="@+id/txtTipPerPersonRes"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="@font/anton"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="0.00"
+                    android:layout_width="wrap_content" />
             </LinearLayout>
 
         </LinearLayout>
